@@ -1,0 +1,9 @@
+site_name: Doc Labtrack
+repo_url: https://github.com/jeffmachado/doclabtrack.github.io.git
+edit_uri: ""
+site_description: "Esse site tem fim demonstrativo e queremos mostrar uma documentação descentralizada."
+site_author: "@jeffmachado"
+# google_analytics: ['UA-36723568-3', 'mkdocs.org'] # Esse é um item legal também :D
+
+nav:
+    - Home: '/'
