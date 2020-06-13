@@ -1,14 +1,16 @@
-image: python:latest
-
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-before_script:
-  - pip install mkdocs
-  - git submodule update --recursive --remote
-  - echo "Checking features of $origem"
+image: polinux/mkdocs
 
 pages:
+  stage: updating-submodule
+  script:
+    - git submodule update --remote $SOURCE
+    - git add docs/$SOURCE
+    - git commit -m "Triggered - Updating changes of $SOURCE submodule"
+    - git push origin master
+  only:
+    variables:
+      - $SOURCE
+
   stage: deploy
   script:
     - mkdocs build -d public
