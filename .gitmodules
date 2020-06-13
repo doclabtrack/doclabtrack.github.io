@@ -1,0 +1,3 @@
+[submodule "docs/terraform"]
+	path = docs/terraform
+	url = https://github.com/jeffmachado/trackerpills-codificando-infra-tf-basico.git

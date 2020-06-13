@@ -6,4 +6,5 @@ site_author: "@jeffmachado"
 # google_analytics: ['UA-36723568-3', 'mkdocs.org'] # Esse é um item legal também :D
 
 nav:
-    - Home: '/'
+    - Home: 'index.md'
+    - Terraform: 'terraform/docs/index.md'

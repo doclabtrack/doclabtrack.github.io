@@ -1,0 +1,18 @@
+image: python:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - pip install mkdocs
+  - git submodule update --recursive --remote
+
+pages:
+  stage: deploy
+  script:
+    - mkdocs build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
