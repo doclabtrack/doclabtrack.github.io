@@ -6,6 +6,7 @@ variables:
 before_script:
   - pip install mkdocs
   - git submodule update --recursive --remote
+  - echo "Checking features of $origem"
 
 pages:
   stage: deploy
