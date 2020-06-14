@@ -8,7 +8,7 @@ update-submodule:
     - git commit -m "Triggered - Updating changes of $SOURCE submodule"
     - git push origin master
   only:
-    varibles:
+    variables:
       - $SOURCE
 
 pages:
