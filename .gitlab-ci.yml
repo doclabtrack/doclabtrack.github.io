@@ -3,7 +3,7 @@ image: polinux/mkdocs
 update-submodule:
   stage: build
   script:
-    - git submodule update --remote $SOURCE
+    - git submodule update --remote docs/$SOURCE
     - git add docs/$SOURCE
     - git commit -m "Triggered - Updating changes of $SOURCE submodule"
     - git push origin master
