@@ -7,9 +7,6 @@ pages:
     - git add docs/$SOURCE
     - git commit -m "Triggered - Updating changes of $SOURCE submodule"
     - git push origin master
-  only:
-    variables:
-      - $SOURCE
   stage: deploy
   script:
     - mkdocs build -d public
