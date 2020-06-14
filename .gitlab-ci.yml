@@ -1,7 +1,7 @@
 image: polinux/mkdocs
 
 pages:
-  stage: updating-submodule
+  stage: submodule
   script:
     - git submodule update --remote $SOURCE
     - git add docs/$SOURCE
@@ -10,7 +10,6 @@ pages:
   only:
     variables:
       - $SOURCE
-
   stage: deploy
   script:
     - mkdocs build -d public
