@@ -3,7 +3,9 @@ image: polinux/mkdocs
 update-submodule:
   stage: build
   script:
-    - git submodule update --remote docs/$SOURCE
+    - git config --global user.email "docbot@labtrack.com"
+    - git config --global user.name "docbot"
+    - git submodule update --init --remote docs/$SOURCE
     - git add docs/$SOURCE
     - git commit -m "Triggered - Updating changes of $SOURCE submodule"
     - git push origin master
